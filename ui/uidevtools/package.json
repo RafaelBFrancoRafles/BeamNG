@@ -1,0 +1,38 @@
+{
+  "name": "uidevtools",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "start": "concurrently \"npm run start-server\" \"npm run start-app\"",
+    "start-server": "set SERVER_HOST=localhost && set SERVER_PORT=8085 && node server/index.js",
+    "start-app": "set VITE_SERVER_HOST=localhost && set VITE_SERVER_PORT=8085 && vite"
+  },
+  "debug": {
+    "env": {
+      "UIDEVTOOLS_APP_URL": "http://127.0.0.1:8086/"
+    }
+  },
+  "dependencies": {
+    "@vueuse/core": "^11.1.0",
+    "express": "^4.21.1",
+    "pinia": "^2.2.4",
+    "primeicons": "^7.0.0",
+    "vue": "^3.5.10",
+    "vue-json-pretty": "^2.4.0",
+    "vue-router": "^4.4.5",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.1.4",
+    "@vue/eslint-config-prettier": "^10.0.0",
+    "autoprefixer": "^10.4.20",
+    "concurrently": "^9.0.1",
+    "daisyui": "^4.12.13",
+    "eslint": "^9.13.0",
+    "eslint-plugin-vue": "^9.29.1",
+    "postcss": "^8.4.47",
+    "prettier": "^3.3.3",
+    "tailwindcss": "^3.4.14",
+    "vite": "^5.4.8"
+  }
+}
